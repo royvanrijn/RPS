@@ -6,8 +6,10 @@ import java.util.List;
 
 import nl.openvalue.rps.players.BeatLastMove;
 import nl.openvalue.rps.players.BeatMostPlayed;
+import nl.openvalue.rps.players.FairBot;
 import nl.openvalue.rps.players.RepeatLastMove;
 import nl.openvalue.rps.players.ScissorBot;
+import nl.openvalue.rps.players.SimplePatternBot;
 
 public class Arena {
 
@@ -22,7 +24,9 @@ public class Arena {
         bots.add(new Bot(BeatLastMove.class));
         bots.add(new Bot(RepeatLastMove.class));
         bots.add(new Bot(BeatMostPlayed.class));
+        bots.add(new Bot(FairBot.class));
         bots.add(new Bot(ScissorBot.class));
+        bots.add(new Bot(SimplePatternBot.class));
         // TODO: Add your own bot here... !
 
 
