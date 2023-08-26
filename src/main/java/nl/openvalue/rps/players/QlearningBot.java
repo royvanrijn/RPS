@@ -8,7 +8,7 @@ import nl.openvalue.rps.RpsBot;
 /**
  * Self-learning bot with a simple Q-learning implementation
  */
-public class QBot implements RpsBot {
+public class QlearningBot implements RpsBot {
 
     private double[] qTable = new double[] {7.284508066549827, 7.483679110656648, 8.242982754275982}; // states x actions
     private double alpha = 0.1; // learning rate

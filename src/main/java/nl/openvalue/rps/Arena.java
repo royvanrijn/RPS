@@ -8,10 +8,12 @@ import nl.openvalue.rps.players.BeatLastMove;
 import nl.openvalue.rps.players.BeatMostPlayed;
 import nl.openvalue.rps.players.FairBot;
 import nl.openvalue.rps.players.MarkovBot;
-import nl.openvalue.rps.players.QBot;
+import nl.openvalue.rps.players.QlearningBot;
 import nl.openvalue.rps.players.RepeatLastMove;
+import nl.openvalue.rps.players.RoyBot;
 import nl.openvalue.rps.players.ScissorBot;
 import nl.openvalue.rps.players.SimplePatternBot;
+import nl.openvalue.rps.players.TimBot;
 
 public class Arena {
 
@@ -30,8 +32,9 @@ public class Arena {
         bots.add(new Bot(ScissorBot.class));
         bots.add(new Bot(SimplePatternBot.class));
         bots.add(new Bot(MarkovBot.class));
-        bots.add(new Bot(QBot.class));
-//        bots.add(new Bot(RoyBot.class));
+        bots.add(new Bot(QlearningBot.class));
+        bots.add(new Bot(RoyBot.class));
+        bots.add(new Bot(TimBot.class));
 
         // TODO: Add your own bot here... !
 
@@ -50,7 +53,7 @@ public class Arena {
 
                 System.out.println("(" + player1.getName() + ") vs (" + player2.getName() + ")");
                 //Match-up:
-                for (int round = 0; round < 2000; round++) {
+                for (int round = 0; round < 5000; round++) {
 
                     // Get player moves:
                     Move m1 = player1.nextMove();
